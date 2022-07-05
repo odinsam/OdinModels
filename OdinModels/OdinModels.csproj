@@ -2,6 +2,18 @@
 
   <PropertyGroup>
     <TargetFrameworks>net5.0;net6.0;netcoreapp3.1</TargetFrameworks>
+    <Title>OdinModels</Title>
+    <Description>OdinModels</Description>
+    <Copyright>odinsam</Copyright>
+    <PackageProjectUrl>https://github.com/odinsam/OdinModels</PackageProjectUrl>
+    <PackageIcon>avatar.jpg</PackageIcon>
+    <RepositoryUrl>https://github.com/odinsam/OdinModels</RepositoryUrl>
+    <RepositoryType>c#</RepositoryType>
+    <PackageTags>c#,net core,log,plug,Models</PackageTags>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <NeutralLanguage>zh-Hans-CN</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +24,13 @@
     <ProjectReference Include="..\OdinModels.Core\OdinModels.Core.csproj" />
     <ProjectReference Include="..\OdinModels.OdinLog\OdinModels.OdinLog.csproj" />
     <ProjectReference Include="..\OdinModels.OdinSignalR\OdinModels.OdinSignalR.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="avatar.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>

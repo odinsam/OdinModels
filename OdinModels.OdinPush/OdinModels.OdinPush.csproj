@@ -3,6 +3,21 @@
     <PropertyGroup>
         <TargetFrameworks>net5.0;net6.0;netcoreapp3.1</TargetFrameworks>
         <LangVersion>8</LangVersion>
+        <Title>OdinModels.OdinPush</Title>
+        <Description>OdinModels.OdinPush</Description>
+        <PackageProjectUrl>https://github.com/odinsam/OdinModels.OdinPush</PackageProjectUrl>
+        <PackageIcon>avatar.jpg</PackageIcon>
+        <RepositoryUrl>https://github.com/odinsam/OdinModels.OdinPush</RepositoryUrl>
+        <RepositoryType>c#</RepositoryType>
+        <PackageTags>OdinModels.OdinPush</PackageTags>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     </PropertyGroup>
+
+    <ItemGroup>
+      <None Update="avatar.jpg">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
 
 </Project>
