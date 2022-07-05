@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;net6.0;netcoreapp3.1</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Entities" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OdinModels.Core\OdinModels.Core.csproj" />
+    <ProjectReference Include="..\OdinModels.OdinLog\OdinModels.OdinLog.csproj" />
+    <ProjectReference Include="..\OdinModels.OdinSignalR\OdinModels.OdinSignalR.csproj" />
+  </ItemGroup>
+
+</Project>
