@@ -1,28 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFrameworks>net5.0;net6.0;netcoreapp3.1</TargetFrameworks>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
         <LangVersion>8</LangVersion>
         <Title>OdinModels.Core</Title>
+        <Authors>odinsam</Authors>
         <Description>OdinModels.Core</Description>
         <Copyright>odinsam</Copyright>
+        <PackageProjectUrl>https://github.com/odinsam/OdinModels/tree/master/OdinModels.Core</PackageProjectUrl>
         <PackageIcon>avatar.jpg</PackageIcon>
-        <PackageProjectUrl>https://github.com/odinsam/OdinModels.Core</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/odinsam/OdinModels.Core</RepositoryUrl>
+        <RepositoryUrl>https://github.com/odinsam/OdinModels/tree/master/OdinModels.Core</RepositoryUrl>
         <RepositoryType>c#</RepositoryType>
         <PackageTags>OdinModels.Core</PackageTags>
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <NeutralLanguage>zh-Hans-CN</NeutralLanguage>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
-
     <ItemGroup>
       <PackageReference Include="SqlSugarCore" Version="5.0.9.2" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Update="avatar.jpg">
-        <Pack>True</Pack>
-        <PackagePath></PackagePath>
-      </None>
+        <Content Include="avatar.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+            <Pack>True</Pack>
+        </Content>
+        <None Include="LICENSE" Pack="true" PackagePath="" />
     </ItemGroup>
 
 </Project>
