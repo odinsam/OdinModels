@@ -3,7 +3,7 @@ using SqlSugar;
 
 namespace OdinModels.Core.Entities
 {
-    public class EntityBase : AbsEntityBase<long> //默认字段类型是long
+    public class EntityBase<T> : AbsEntityBase<T> //默认字段类型是long
     {
         /// <summary>
         /// Id主键

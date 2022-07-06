@@ -19,9 +19,6 @@
       <ProjectReference Include="..\OdinModels.Core\OdinModels.Core.csproj" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="Entities" />
-    </ItemGroup>
-    <ItemGroup>
         <Content Include="avatar.jpg">
             <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
