@@ -8,6 +8,10 @@
 
 项目部分说明在 [OdinSam's blog](https://www.odinsam.com/) 的博客中有文章说明
 
+### [扩展封装说明](https://github.com/odinsam/OdinModels/blob/master/OdinModels.OdinUtils/OdinExtensions/OdinUtils.ReadMe.md)
+
+### [安全类封装说明](https://github.com/odinsam/OdinModels/blob/master/OdinModels.OdinUtils/OdinExtensions/OdinUtils.ReadMe.md)
+
 ### changelog
 
 v1.0.8
