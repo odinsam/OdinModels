@@ -1,17 +1,41 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFrameworks>net5.0;net6.0;netcoreapp3.1</TargetFrameworks>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <LangVersion>8</LangVersion>
+    <Title>OdinModels</Title>
+    <Description>OdinModels</Description>
+    <Copyright>odinsam</Copyright>
+    <PackageProjectUrl>https://github.com/odinsam/OdinModels</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/odinsam/OdinModels</RepositoryUrl>
+    <RepositoryType>c#</RepositoryType>
+    <PackageTags>OdinModels</PackageTags>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <NeutralLanguage>zh-Hans-CN</NeutralLanguage>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
-
+  <ItemGroup>
+    <None Remove="avatar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="avatar.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\OdinModels.Core\OdinModels.Core.csproj" />
     <ProjectReference Include="..\OdinModels.OdinLog\OdinModels.OdinLog.csproj" />
+    <ProjectReference Include="..\OdinModels.OdinPush\OdinModels.OdinPush.csproj" />
     <ProjectReference Include="..\OdinModels.OdinSignalR\OdinModels.OdinSignalR.csproj" />
+    <ProjectReference Include="..\OdinModels.OdinUtils\OdinModels.OdinUtils.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LICENSE" Pack="true" PackagePath="" />
   </ItemGroup>
 
 </Project>

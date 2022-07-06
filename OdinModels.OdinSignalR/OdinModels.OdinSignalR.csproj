@@ -1,16 +1,31 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFrameworks>net5.0;net6.0;netcoreapp3.1</TargetFrameworks>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
         <LangVersion>8</LangVersion>
+        <Title>OdinModels.OdinSignalR</Title>
+        <Authors>odinsam</Authors>
+        <Description>OdinModels.OdinSignalR</Description>
+        <Copyright>odinsam</Copyright>
+        <PackageProjectUrl>https://github.com/odinsam/OdinModels.OdinSignalR</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/odinsam/OdinModels.OdinSignalR</RepositoryUrl>
+        <RepositoryType>c#</RepositoryType>
+        <PackageTags>OdinModels.OdinSignalR</PackageTags>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <NeutralLanguage>zh-Hans-CN</NeutralLanguage>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
     </PropertyGroup>
-
     <ItemGroup>
       <ProjectReference Include="..\OdinModels.Core\OdinModels.Core.csproj" />
     </ItemGroup>
-
     <ItemGroup>
       <Folder Include="Entities" />
+    </ItemGroup>
+    <ItemGroup>
+        <Content Include="avatar.jpg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </Content>
+        <None Include="LICENSE" Pack="true" PackagePath="" />
     </ItemGroup>
 
 </Project>
