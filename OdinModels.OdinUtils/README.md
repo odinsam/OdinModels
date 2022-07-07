@@ -10,7 +10,7 @@
 
 ### [扩展封装说明](https://github.com/odinsam/OdinModels/blob/master/OdinModels.OdinUtils/OdinExtensions/OdinUtils.ReadMe.md)
 
-### [安全类封装说明](https://github.com/odinsam/OdinModels/blob/master/OdinModels.OdinUtils/OdinExtensions/OdinUtils.ReadMe.md)
+### [安全类封装说明](https://github.com/odinsam/OdinModels/blob/master/OdinModels.OdinUtils/OdinSecurity/OdinSecurity.md)
 
 ### changelog
 

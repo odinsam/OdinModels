@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <LangVersion>10</LangVersion>
+        <Title>OdinModels.SnowFlake</Title>
+        <Authors>odinsam</Authors>
+        <Description>OdinModels.SnowFlake</Description>
+        <Copyright>odinsam</Copyright>
+        <PackageProjectUrl>https://github.com/odinsam/OdinModels/tree/master/OdinModels.SnowFlake</PackageProjectUrl>
+        <PackageIcon>avatar.jpg</PackageIcon>
+        <RepositoryUrl>https://github.com/odinsam/OdinModels/tree/master/OdinModels.SnowFlake</RepositoryUrl>
+        <RepositoryType>c#</RepositoryType>
+        <PackageTags>OdinModels.SnowFlake</PackageTags>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <NeutralLanguage>zh-Hans-CN</NeutralLanguage>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+</Project>

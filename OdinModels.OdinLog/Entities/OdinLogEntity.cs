@@ -6,7 +6,7 @@ namespace OdinModels.OdinLog.Entities
     /// <summary>
     /// log日志
     /// </summary>
-    public class OdinLogEntity : AbsEntityBase<string>
+    public class OdinLogEntity : EntityBase<string>
     {
         /// <summary>
         /// Id主键

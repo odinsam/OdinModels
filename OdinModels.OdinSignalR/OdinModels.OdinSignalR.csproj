@@ -1,6 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>net5.0;net6.0;netcoreapp3.1</TargetFrameworks>
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <LangVersion>8</LangVersion>
         <Title>OdinModels.OdinSignalR</Title>
@@ -14,12 +13,10 @@
         <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
         <NeutralLanguage>zh-Hans-CN</NeutralLanguage>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <TargetFramework>net6.0</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
       <ProjectReference Include="..\OdinModels.Core\OdinModels.Core.csproj" />
-    </ItemGroup>
-    <ItemGroup>
-      <Folder Include="Entities" />
     </ItemGroup>
     <ItemGroup>
         <Content Include="avatar.jpg">

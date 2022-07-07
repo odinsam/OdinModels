@@ -1,6 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>net5.0;net6.0;netcoreapp3.1</TargetFrameworks>
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <LangVersion>8</LangVersion>
         <Title>OdinModels.OdinLog</Title>
@@ -17,6 +16,7 @@
         <ApplicationIcon />
         <Win32Resource />
         <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <TargetFramework>net6.0</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
       <ProjectReference Include="..\OdinModels.Core\OdinModels.Core.csproj" />

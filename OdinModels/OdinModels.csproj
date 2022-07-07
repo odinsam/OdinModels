@@ -1,6 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net5.0;net6.0;netcoreapp3.1</TargetFrameworks>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <LangVersion>8</LangVersion>
     <Title>OdinModels</Title>
@@ -15,6 +14,7 @@
     <FileVersion>1.0.0</FileVersion>
     <NeutralLanguage>zh-Hans-CN</NeutralLanguage>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="avatar.jpg" />
@@ -25,9 +25,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Entities" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\OdinModels.Core\OdinModels.Core.csproj" />
     <ProjectReference Include="..\OdinModels.OdinLog\OdinModels.OdinLog.csproj" />
     <ProjectReference Include="..\OdinModels.OdinPush\OdinModels.OdinPush.csproj" />
@@ -36,6 +33,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities" />
   </ItemGroup>
 
 </Project>

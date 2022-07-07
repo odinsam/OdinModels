@@ -1,6 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>net5.0;net6.0;netcoreapp3.1</TargetFrameworks>
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <LangVersion>8</LangVersion>
         <Title>OdinModels.OdinPush</Title>
@@ -17,6 +16,7 @@
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
         <PackageIconUrl />
         <FileVersion>1.0.0</FileVersion>
+        <TargetFramework>net6.0</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
         <None Include="avatar.jpg">
@@ -30,5 +30,11 @@
         <Content Include="avatar.jpg">
           <CopyToOutputDirectory>Always</CopyToOutputDirectory>
         </Content>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\OdinModels.Core\OdinModels.Core.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Entities" />
     </ItemGroup>
 </Project>
