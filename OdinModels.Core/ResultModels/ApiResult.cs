@@ -16,15 +16,16 @@ namespace OdinModels.Core.ResultModels
         /// <summary>
         /// 方法返回结果标识
         /// </summary>
-        private int code;
+        private int _code;
         public int Code 
         {
-            get { return code; }
+            get { return _code; }
             set
             {
                 try
                 {
                     EnumResult result = (EnumResult)value;
+                    _code = value;
                 }
                 catch
                 {
