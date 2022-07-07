@@ -9,7 +9,7 @@ namespace OdinModels.Core.Entities
         /// Id主键
         /// </summary>
         [SugarColumn(ColumnName = "Id",IsPrimaryKey = true,IsIdentity = false)]
-        public new virtual T Id { get; set; }
+        public virtual T Id { get; set; }
         
         /// <summary>
         /// Remark
