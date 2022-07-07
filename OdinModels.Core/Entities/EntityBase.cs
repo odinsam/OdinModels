@@ -3,13 +3,13 @@ using SqlSugar;
 
 namespace OdinModels.Core.Entities
 {
-    public class EntityBase<T> : AbsEntityBase<T> //默认字段类型是long
+    public class EntityBase<T> : IEntityBase<T> //默认字段类型是long
     {
         /// <summary>
         /// Id主键
         /// </summary>
         [SugarColumn(ColumnName = "Id",IsPrimaryKey = true,IsIdentity = false)]
-        public new virtual long Id { get; set; }
+        public new virtual T Id { get; set; }
         
         /// <summary>
         /// Remark

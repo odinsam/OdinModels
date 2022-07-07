@@ -1,3 +1,4 @@
+using OdinModels.Core.Entities;
 using SqlSugar;
 
 namespace OdinModels.OdinSignalR.Entities
@@ -6,7 +7,7 @@ namespace OdinModels.OdinSignalR.Entities
     /// signalR 推送记录表
     /// </summary>
     [SugarTable("tb_PushEvent")]
-    public class PushEventEntity
+    public class PushEventEntity:EntityBase<long>
     {
         /// <summary>
         /// 事件名称

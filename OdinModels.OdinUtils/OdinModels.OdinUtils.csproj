@@ -1,6 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>net5.0;net6.0;netcoreapp3.1</TargetFrameworks>
         <AssemblyVersion>1.0.0</AssemblyVersion>
         <LangVersion>8</LangVersion>
         <Title>OdinModels.OdinUtils</Title>
@@ -13,6 +12,7 @@
         <PackageTags>OdinModels.OdinUtils</PackageTags>
         <NeutralLanguage>zh-Hans-CN</NeutralLanguage>
         <PackageLicenseFile></PackageLicenseFile>
+        <TargetFramework>net6.0</TargetFramework>
     </PropertyGroup>
     <ItemGroup>
       <None Remove="avatar.jpg" />
@@ -27,7 +27,7 @@
     <ItemGroup>
       <PackageReference Include="Mapster" Version="7.3.0" />
       <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
-      <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />
       <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
       <PackageReference Include="XC.RSAUtil" Version="1.3.6" />
     </ItemGroup>
