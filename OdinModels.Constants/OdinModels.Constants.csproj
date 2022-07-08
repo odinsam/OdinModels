@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net6.0;</TargetFrameworks>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <LangVersion>10</LangVersion>
+        <Nullable>disable</Nullable>
+        <Title>OdinModels.Constants</Title>
+        <Authors>odinsam</Authors>
+        <Description>OdinModels.Constants</Description>
+        <Copyright>odinsam</Copyright>
+        <PackageProjectUrl>https://github.com/odinsam/OdinModels/tree/master/OdinModels.Constants</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/odinsam/OdinModels/tree/master/OdinModels.Constants</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>OdinModels.Constants</PackageTags>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <NeutralLanguage>zh-Hans-CN</NeutralLanguage>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="LICENSE" Pack="true" PackagePath="" />
+    </ItemGroup>
+</Project>

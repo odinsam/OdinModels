@@ -1,21 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32510.428
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdinModels", "OdinModels\OdinModels.csproj", "{CEB7F27F-07F7-4FDA-86DD-8E0CDEBAEB3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdinModels", "OdinModels\OdinModels.csproj", "{CEB7F27F-07F7-4FDA-86DD-8E0CDEBAEB3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdinModels.OdinLog", "OdinModels.OdinLog\OdinModels.OdinLog.csproj", "{5CFB77D2-0676-4695-9F20-C4350EDDA6AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdinModels.OdinLog", "OdinModels.OdinLog\OdinModels.OdinLog.csproj", "{5CFB77D2-0676-4695-9F20-C4350EDDA6AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdinModels.OdinSignalR", "OdinModels.OdinSignalR\OdinModels.OdinSignalR.csproj", "{CFC6B176-45AF-4565-8994-A17EA703E0D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdinModels.OdinSignalR", "OdinModels.OdinSignalR\OdinModels.OdinSignalR.csproj", "{CFC6B176-45AF-4565-8994-A17EA703E0D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdinModels.Core", "OdinModels.Core\OdinModels.Core.csproj", "{D4A297E3-CFAD-4777-B21C-266C5B2C28A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdinModels.Core", "OdinModels.Core\OdinModels.Core.csproj", "{D4A297E3-CFAD-4777-B21C-266C5B2C28A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdinModels.OdinPush", "OdinModels.OdinPush\OdinModels.OdinPush.csproj", "{D191C455-4D06-4C42-A52A-C15118B5F1D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdinModels.OdinPush", "OdinModels.OdinPush\OdinModels.OdinPush.csproj", "{D191C455-4D06-4C42-A52A-C15118B5F1D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdinModels.OdinUtils", "OdinModels.OdinUtils\OdinModels.OdinUtils.csproj", "{F87C75BE-7D76-44D7-897D-DBD6DB35AB2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdinModels.OdinUtils", "OdinModels.OdinUtils\OdinModels.OdinUtils.csproj", "{F87C75BE-7D76-44D7-897D-DBD6DB35AB2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdinModels.SnowFlake", "OdinModels.SnowFlake\OdinModels.SnowFlake.csproj", "{8C359DEC-84E5-4DC8-9D05-F324E17F1EA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdinModels.SnowFlake", "OdinModels.SnowFlake\OdinModels.SnowFlake.csproj", "{8C359DEC-84E5-4DC8-9D05-F324E17F1EA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdinModels.OdinNacos", "OdinModels.OdinNacos\OdinModels.OdinNacos.csproj", "{B602485D-F241-461D-9B58-9CB74EE8645C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{8C359DEC-84E5-4DC8-9D05-F324E17F1EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C359DEC-84E5-4DC8-9D05-F324E17F1EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C359DEC-84E5-4DC8-9D05-F324E17F1EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B602485D-F241-461D-9B58-9CB74EE8645C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B602485D-F241-461D-9B58-9CB74EE8645C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B602485D-F241-461D-9B58-9CB74EE8645C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B602485D-F241-461D-9B58-9CB74EE8645C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

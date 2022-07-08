@@ -36,7 +36,7 @@ namespace OdinModels.OdinSignalR.Entities
         /// <summary>
         /// 消息事件编号
         /// </summary>
-        [SugarColumn(ColumnName = "EventId")]
-        public int EventId { get; set; }
+        [SugarColumn(ColumnName = "EventType",Length =32)]
+        public string EventType { get; set; }
     }
 }
