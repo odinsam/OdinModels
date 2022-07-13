@@ -19,4 +19,7 @@
     <ItemGroup>
         <None Include="LICENSE" Pack="true" PackagePath="" />
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\OdinModels.OdinUtils\OdinModels.OdinUtils.csproj" />
+    </ItemGroup>
 </Project>

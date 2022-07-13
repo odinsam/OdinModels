@@ -12,6 +12,20 @@ namespace OdinModels.OdinUtils.OdinExtensions
 {
     public static class OdinStringExtensions
     {
+        public static int ToInt(this string str)
+        {
+            return Convert.ToInt32(str);
+        }
+        /// <summary>
+        /// compare string ignore case
+        /// </summary>
+        /// <param name="str">string</param>
+        /// <param name="compareString">compare string</param>
+        /// <returns></returns>
+        public static bool CompareString(this string str, string compareString)
+        {
+            return String.Compare(str, compareString, StringComparison.OrdinalIgnoreCase)==0;
+        }
 
         /// <summary>
         /// Indicates whether the specified string is null or an empty string ("").

@@ -3,23 +3,16 @@
 /// <summary>
 /// consul server entity
 /// </summary>
-public class ServiceEntity
+public class ServiceConfig
 {
     /// <summary>
-    /// server Protocol
+    /// consul register id
     /// </summary>
-    public string ServerProtocol { get; set; } = "http";
-
+    public string RegisterId { get; set; }
     /// <summary>
-    /// server ip
+    /// 健康检查地址
     /// </summary>
-    public string ServerIP { get; set; } = "localhost";
-
-    /// <summary>
-    /// server port
-    /// </summary>
-    public int ServerPort { get; set; } = new Random().Next(10000, 65535);
-
+    public string HealthUrl { get; set; }
     /// <summary>
     /// 服务启动多久后注册  单位: 秒
     /// </summary>
@@ -40,16 +33,4 @@ public class ServiceEntity
     /// server name
     /// </summary>
     public string[] Tags { get; set; }
-    /// <summary>
-    /// consul Protocol
-    /// </summary>
-    public string ConsulProtocol { get; set; }
-    /// <summary>
-    /// consul ip
-    /// </summary>
-    public string ConsulIP { get; set; }
-    /// <summary>
-    /// consul port
-    /// </summary>
-    public int ConsulPort { get; set; }
 }

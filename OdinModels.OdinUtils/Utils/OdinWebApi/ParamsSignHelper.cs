@@ -2,11 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json.Linq;
+using OdinModels.OdinUtils.OdinExceptionExtensions;
 using OdinModels.OdinUtils.OdinSecurity.OdinStringSecurity;
 
 namespace OdinModels.OdinUtils.Utils.OdinWebApi
 {
     // *       签名算法 （无需参数   此步骤作废）
+    // *       UrlAddSign 生成签名       ValiedateSign 验证签名
     // *       第一步：对参数按照key=value的格式，并按照参数名ASCII字典序排序:    b=yy&a=xx&c=zz  排序后为  a=xx&b=yy&c=zz
     // *       第二步：拼接Url密钥：a=xx&b=yy&c=zz&sign=key     （key由开发者提供）
     // *       第三步：Md5ToLower(Url密钥,32) 得到签名秘钥signKey
@@ -75,10 +77,7 @@ namespace OdinModels.OdinUtils.Utils.OdinWebApi
             foreach (KeyValuePair<string, object> pair in _mValues)
             {
                 if (pair.Value == null)
-                {
-                    throw new Exception("SortedDictionary内部含有值为null的字段!");
-                }
-
+                    throw new OdinException(EnumOdinException.ParamNotNull);
                 if (pair.Key != "sign" && pair.Value.ToString() != "")
                 {
                     buff += pair.Key + "=" + pair.Value + "&";
@@ -101,9 +100,7 @@ namespace OdinModels.OdinUtils.Utils.OdinWebApi
             foreach (var urlParam in urlParams.Split('&'))
             {
                 if (urlParam.Split('=').Length == 1)
-                {
-                    throw new Exception("urlParams内部含没有值的参数!");
-                }
+                    throw new OdinException(EnumOdinException.ParamNotNull);
                 var key = urlParam.Split('=')[0];
                 var value = urlParam.Split('=')[1];
                 if (key != "sign")
@@ -131,9 +128,7 @@ namespace OdinModels.OdinUtils.Utils.OdinWebApi
             foreach (var urlParam in urlParams.Split('&'))
             {
                 if (urlParam.Split('=').Length == 1)
-                {
-                    throw new Exception("urlParams内部含没有值的参数!");
-                }
+                    throw new OdinException(EnumOdinException.ParamNotNull);
                 var key = urlParam.Split('=')[0];
                 var value = urlParam.Split('=')[1];
                 if (key != "sign")
@@ -157,7 +152,7 @@ namespace OdinModels.OdinUtils.Utils.OdinWebApi
         {
             string url = string.Empty;
             if (jobj.Properties().Count() == 1)
-                throw new Exception("jobj内部含没有值的参数!");
+                throw new OdinException(EnumOdinException.ParamNotNull);
             _mValues.Clear();
             string oldSign = null;
             foreach (var item in jobj.Properties())

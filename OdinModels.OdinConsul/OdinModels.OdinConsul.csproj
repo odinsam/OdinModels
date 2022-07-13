@@ -19,6 +19,9 @@
     <ItemGroup>
         <None Include="LICENSE" Pack="true" PackagePath="" />
     </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\OdinModels.OdinUtils\OdinModels.OdinUtils.csproj" />
+    </ItemGroup>
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>

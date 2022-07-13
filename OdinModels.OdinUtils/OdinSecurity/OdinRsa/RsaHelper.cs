@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using OdinModels.OdinUtils.OdinExceptionExtensions;
 using OdinModels.OdinUtils.OdinSecurity.OdinRsa.OdinRsaEnum;
 using OdinModels.OdinUtils.OdinSecurity.OdinRsa.OdinRsaExtensions;
 
@@ -62,7 +63,7 @@ namespace OdinModels.OdinUtils.OdinSecurity.OdinRsa
             }
             if (string.IsNullOrWhiteSpace(publicKey))
             {
-                throw new ArgumentException("Invalid Public Key");
+                throw new OdinException(EnumOdinException.RsaEncrypt);
             }
             using (var rsaProvider = RSA.Create())
             {
@@ -108,12 +109,8 @@ namespace OdinModels.OdinUtils.OdinSecurity.OdinRsa
             {
                 return string.Empty;
             }
-
             if (string.IsNullOrWhiteSpace(privateKey))
-            {
-                throw new ArgumentException("Invalid Private Key");
-            }
-
+                throw new OdinException(EnumOdinException.RsaDecrypt);
             using (var rsaProvider = RSA.Create())
             {
                 var inputBytes = Convert.FromBase64String(encryptedInput);

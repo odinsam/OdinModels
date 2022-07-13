@@ -1,4 +1,5 @@
 using System;
+using OdinModels.OdinUtils.OdinExceptionExtensions;
 
 namespace OdinModels.OdinUtils.Utils.OdinChineseCalendar
 {
@@ -382,9 +383,7 @@ namespace OdinModels.OdinUtils.Utils.OdinChineseCalendar
 
                 //检查日期是否大于最大天
                 if (cd > GetChineseMonthDays(cy, cm))
-                {
-                    throw new ChineseCalendarException("不合法的农历日期");
-                }
+                    throw new OdinException(EnumOdinException.ParamValidationFailed);
                 offset = offset + cd; //加上当月的天数
                 #endregion
             }
@@ -403,9 +402,7 @@ namespace OdinModels.OdinUtils.Utils.OdinChineseCalendar
                     offset = offset + temp;               //加上闰月天数
 
                     if (cd > GetChineseMonthDays(cy, cm))
-                    {
-                        throw new ChineseCalendarException("不合法的农历日期");
-                    }
+                        throw new OdinException(EnumOdinException.ParamValidationFailed);
                     offset = offset + cd;
                 }
                 else  //计算月等于闰月
@@ -418,9 +415,7 @@ namespace OdinModels.OdinUtils.Utils.OdinChineseCalendar
                     }
 
                     if (cd > GetChineseLeapMonthDays(cy))
-                    {
-                        throw new ChineseCalendarException("不合法的农历日期");
-                    }
+                        throw new OdinException(EnumOdinException.ParamValidationFailed);
                     offset = offset + cd;
                 }
                 #endregion
@@ -549,9 +544,7 @@ namespace OdinModels.OdinUtils.Utils.OdinChineseCalendar
         private void CheckDateLimit(DateTime dt)
         {
             if ((dt < MinDay) || (dt > MaxDay))
-            {
-                throw new ChineseCalendarException("超出可转换的日期");
-            }
+                throw new OdinException(EnumOdinException.ParamOutOfRang);
         }
         #endregion
 
@@ -566,23 +559,14 @@ namespace OdinModels.OdinUtils.Utils.OdinChineseCalendar
         private void CheckChineseDateLimit(int year, int month, int day, bool leapMonth)
         {
             if ((year < MinYear) || (year > MaxYear))
-            {
-                throw new ChineseCalendarException("非法农历日期");
-            }
+                throw new OdinException(EnumOdinException.ParamValidationFailed);
             if ((month < 1) || (month > 12))
-            {
-                throw new ChineseCalendarException("非法农历日期");
-            }
+                throw new OdinException(EnumOdinException.ParamValidationFailed);
             if ((day < 1) || (day > 30)) //中国的月最多30天
-            {
-                throw new ChineseCalendarException("非法农历日期");
-            }
-
+                throw new OdinException(EnumOdinException.ParamValidationFailed);
             int leap = GetChineseLeapMonth(year);// 计算该年应该闰哪个月
             if ((leapMonth == true) && (month != leap))
-            {
-                throw new ChineseCalendarException("非法农历日期");
-            }
+                throw new OdinException(EnumOdinException.ParamValidationFailed);
 
 
         }
@@ -636,7 +620,7 @@ namespace OdinModels.OdinUtils.Utils.OdinChineseCalendar
         {
 
             if ((bitpostion > 31) || (bitpostion < 0))
-                throw new Exception("Error Param: bitpostion[0-31]:" + bitpostion.ToString());
+                throw new OdinException("Error Param: bitpostion[0-31]:" + bitpostion.ToString());
 
             int bit = 1 << bitpostion;
 

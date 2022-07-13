@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using OdinModels.OdinUtils.OdinExceptionExtensions;
 using OdinModels.OdinUtils.OdinExtensions;
 
 namespace OdinModels.OdinUtils.OdinSecurity.OdinSecurityAes
@@ -20,11 +21,11 @@ namespace OdinModels.OdinUtils.OdinSecurity.OdinSecurityAes
             byte[] keyBytes = null;
             byte[] aiBytes = null;
             if (!key.IsNullOrEmpty() && key.Length != 32)
-                throw new Exception("key 需要 32 位长度");
+                throw new OdinException(EnumOdinException.EncryptByAesX01);
             if (!aesAi.IsNullOrEmpty() && key.IsNullOrEmpty())
-                throw new Exception("如要使用 aes_ai 偏移量参数，必须要有加密盐值参数 key");
+                throw new OdinException(EnumOdinException.EncryptByAesX02);
             if (aesAi != null && !aesAi.IsNormalized() && aesAi.Length != 16)
-                throw new Exception("aes_ai 需要 16 位长度");
+                throw new OdinException(EnumOdinException.EncryptByAesX03);
             if (!key.IsNullOrEmpty())
                 keyBytes = Encoding.UTF8.GetBytes(key.Substring(0, 32));
             if (!aesAi.IsNullOrEmpty())
@@ -59,11 +60,11 @@ namespace OdinModels.OdinUtils.OdinSecurity.OdinSecurityAes
             byte[] keyBytes = null;
             byte[] aiBytes = null;
             if (!key.IsNullOrEmpty() && key.Length != 32)
-                throw new Exception("key 需要 32 位长度");
+                throw new OdinException(EnumOdinException.DecryptByAesX01);
             if (!aesAi.IsNullOrEmpty() && key.IsNullOrEmpty())
-                throw new Exception("如要使用 aes_ai 偏移量参数，必须要有加密盐值参数 key");
+                throw new OdinException(EnumOdinException.DecryptByAesX02);
             if (aesAi != null && !aesAi.IsNormalized() && aesAi.Length != 16)
-                throw new Exception("aes_ai 需要 16 位长度");
+                throw new OdinException(EnumOdinException.DecryptByAesX03);
             if (!key.IsNullOrEmpty())
                 keyBytes = Encoding.UTF8.GetBytes(key.Substring(0, 32));
             if (!aesAi.IsNullOrEmpty())

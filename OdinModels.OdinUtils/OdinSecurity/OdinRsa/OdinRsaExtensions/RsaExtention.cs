@@ -1,6 +1,7 @@
 using System;
 using System.Security.Cryptography;
 using System.Xml;
+using OdinModels.OdinUtils.OdinExceptionExtensions;
 
 namespace OdinModels.OdinUtils.OdinSecurity.OdinRsa.OdinRsaExtensions
 {
@@ -46,7 +47,7 @@ namespace OdinModels.OdinUtils.OdinSecurity.OdinRsa.OdinRsaExtensions
             }
             else
             {
-                throw new Exception("Invalid XML RSA key.");
+                throw new OdinException(EnumOdinException.FromXmlStringEx);
             }
 
             rsa.ImportParameters(parameters);

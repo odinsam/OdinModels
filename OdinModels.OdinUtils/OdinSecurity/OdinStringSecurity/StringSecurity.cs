@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using OdinModels.OdinUtils.OdinExceptionExtensions;
 using OdinModels.OdinUtils.OdinExtensions;
 
 namespace OdinModels.OdinUtils.OdinSecurity.OdinStringSecurity
@@ -88,9 +89,7 @@ namespace OdinModels.OdinUtils.OdinSecurity.OdinStringSecurity
                 return jobj;
             }
             else
-            {
-                throw new Exception("邮箱格式不正确");
-            }
+                throw new OdinException(EnumOdinException.RegexEmail);
         }
 
         /// <summary>
@@ -152,9 +151,7 @@ namespace OdinModels.OdinUtils.OdinSecurity.OdinStringSecurity
                 return jobj;
             }
             else
-            {
-                throw new Exception("身份证格式不正确");
-            }
+                throw new OdinException(EnumOdinException.RegexIdCardNumber);
         }
 
         /// <summary>
@@ -178,9 +175,7 @@ namespace OdinModels.OdinUtils.OdinSecurity.OdinStringSecurity
                 return jobj;
             }
             else
-            {
-                throw new Exception("移动电话号码格式不正确");
-            }
+                throw new OdinException(EnumOdinException.RegexPhoneNumber);
         }
 
         /// <summary>

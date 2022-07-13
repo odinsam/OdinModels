@@ -1,5 +1,6 @@
 using System;
 using OdinModels.Core.Enums;
+using OdinModels.OdinUtils.OdinExceptionExtensions;
 
 namespace OdinModels.Core.ResultModels
 {
@@ -29,7 +30,7 @@ namespace OdinModels.Core.ResultModels
                 }
                 catch
                 {
-                    throw new Exception($"Code 的值必须是 {typeof(EnumResult).FullName} 中的值");
+                    throw new OdinException(EnumOdinException.ParamOutOfRang);
                 }
             }
         }
